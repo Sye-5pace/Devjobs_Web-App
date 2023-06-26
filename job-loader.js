@@ -1,9 +1,12 @@
 import jobs from './data'
 
 // console.log(jobs[0].logo)
+let defaultLoad
 
 export const jobsLoader = ()=>{
-    jobs.forEach((job,index)=>{
+    defaultLoad = jobs.slice(0,6)
+    
+    defaultLoad.forEach((job,index)=>{
         const jobCard = document.createElement('div');
         jobCard.setAttribute('data-index',index)
 
