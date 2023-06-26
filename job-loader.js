@@ -49,21 +49,24 @@ const createJobCards = (job,index)=>{
         jobCard.appendChild(companyLocation)
         jobCard.classList.add('flex','flex-col','pl-8','bg-[#fff]','gap-y-6','py-6' ,'rounded-[0.65rem]')
 
-    return jobCard;
+        
+        jobCard.addEventListener('click',(event)=>{
+            const jobIndex = event.currentTarget.dataset.index
+            console.log("Job #:",jobIndex)
+        })
+        return jobCard;
 }
 
 loadMore.addEventListener('click', (event)=>{
-    // event.currentTarget.querySelector('h3').textContent = 'l';
     event.currentTarget.classList.add('opacity-30')
 
     const jobContainer = document.getElementById('job-container')
     jobContainer.innerHTML = '';
 
     const remainingJobs = jobs.slice(currentIndex)
-    currentIndex += remainingJobs.length
 
     remainingJobs.forEach((job,index)=>{
-        const jobCard = createJobCards(job,index + currentIndex)
+        const jobCard = createJobCards(job,index)
         jobContainer.appendChild(jobCard)
     });
 });
