@@ -1,13 +1,21 @@
 import jobs from './data'
 
 // console.log(jobs[0].logo)
-let defaultLoad
-// const 
+let defaultLoad = [];
+let currentIndex = 0;
+const loadMore = document.getElementById('load-more')
 
 export const jobsLoader = ()=>{
     defaultLoad = jobs.slice(0,6)
     
     defaultLoad.forEach((job,index)=>{
+        const jobCard = createJobCards(job,index)
+        const jobContainer = document.getElementById('job-container')
+        jobContainer.appendChild(jobCard)
+    })
+}
+
+const createJobCards = (job,index)=>{
         const jobCard = document.createElement('div');
         jobCard.setAttribute('data-index',index)
 
@@ -41,8 +49,21 @@ export const jobsLoader = ()=>{
         jobCard.appendChild(companyLocation)
         jobCard.classList.add('flex','flex-col','pl-8','bg-[#fff]','gap-y-6','py-6' ,'rounded-[0.65rem]')
 
-        const jobContainer = document.getElementById('job-container')
-        jobContainer.appendChild(jobCard)
-    })
+    return jobCard;
 }
 
+loadMore.addEventListener('click', (event)=>{
+    // event.currentTarget.querySelector('h3').textContent = 'l';
+    event.currentTarget.classList.add('opacity-30')
+
+    const jobContainer = document.getElementById('job-container')
+    jobContainer.innerHTML = '';
+
+    const remainingJobs = jobs.slice(currentIndex)
+    currentIndex += remainingJobs.length
+
+    remainingJobs.forEach((job,index)=>{
+        const jobCard = createJobCards(job,index + currentIndex)
+        jobContainer.appendChild(jobCard)
+    });
+});
