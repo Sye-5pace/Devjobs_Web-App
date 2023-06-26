@@ -2,6 +2,7 @@ import jobs from './data'
 
 // console.log(jobs[0].logo)
 let defaultLoad
+// const 
 
 export const jobsLoader = ()=>{
     defaultLoad = jobs.slice(0,6)
