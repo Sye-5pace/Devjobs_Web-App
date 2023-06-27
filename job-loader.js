@@ -20,7 +20,8 @@ const createJobCards = (job,index)=>{
         jobCard.setAttribute('data-index',index)
 
         const jobIcon = document.createElement('img')
-        jobIcon.innerHTML = job.logo
+        jobIcon.src = job.logo
+        jobIcon.classList.add('w-[4rem]','h-[4rem]','-mt-7')
         
         const postedContractTime = document.createElement('h3')
         postedContractTime.innerHTML = job.postedAt + '<div class="w-2 h-2 bg-[#6f809b] rounded-full"></div>' + job.contract;
@@ -47,7 +48,7 @@ const createJobCards = (job,index)=>{
         jobCard.appendChild(jobIcon)
         jobCard.appendChild(jobDetails)
         jobCard.appendChild(companyLocation)
-        jobCard.classList.add('flex','flex-col','pl-8','bg-[#fff]','gap-y-6','py-6' ,'rounded-[0.65rem]')
+        jobCard.classList.add('flex','flex-col','pl-8','bg-[#fff]','gap-y-6','pb-6' ,'rounded-[0.65rem]')
 
         
         jobCard.addEventListener('click',(event)=>{
