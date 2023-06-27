@@ -48,7 +48,7 @@ const createJobCards = (job,index)=>{
         jobCard.appendChild(jobIcon)
         jobCard.appendChild(jobDetails)
         jobCard.appendChild(companyLocation)
-        jobCard.classList.add('flex','flex-col','pl-8','bg-[#fff]','gap-y-9','pb-6' ,'rounded-[0.65rem]')
+        jobCard.classList.add('flex','flex-col','pl-8','bg-[#fff]','gap-y-9','pb-6' ,'rounded-[0.65rem]','job-card')
 
         
         jobCard.addEventListener('click',(event)=>{

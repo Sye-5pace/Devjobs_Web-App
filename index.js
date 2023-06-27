@@ -1,4 +1,5 @@
 import { jobsLoader} from './job-loader.js'
+import { searchByTitle } from './query-helper.js';
 
 document.addEventListener('DOMContentLoaded', ()=>{
     jobsLoader();
@@ -10,4 +11,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         jobContainer.innerHTML = '';
         jobsLoader();
     })
+
+    const search = document.querySelector('#search');
+    search.addEventListener("click", searchByTitle)
 })
