@@ -1,5 +1,5 @@
 import { jobsLoader} from './job-loader.js'
-import { filterByTitle } from './query-helper.js';
+import { filterByTitle,filterByLocation } from './query-helper.js';
 
 document.addEventListener('DOMContentLoaded', ()=>{
     jobsLoader();
@@ -24,5 +24,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const modalSearch = document.querySelector('#query');
     modalSearch.addEventListener("click", ()=>{
         filterMobileModal.style.display = 'none';
+        filterByLocation();
     });
 })

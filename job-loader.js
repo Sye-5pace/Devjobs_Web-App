@@ -23,10 +23,19 @@ const createJobCards = (job,index)=>{
         jobIcon.src = job.logo
         jobIcon.classList.add('w-[4rem]','h-[4rem]','-mt-7')
         
-        const postedContractTime = document.createElement('h3')
-        postedContractTime.innerHTML = job.postedAt + '<div class="w-2 h-2 bg-[#6f809b] rounded-full"></div>' + job.contract;
-        postedContractTime.classList.add('text-[#6f809b]','flex','items-center','gap-2')
+        const postedTime = document.createElement('h3')
+        postedTime.innerHTML = job.postedAt + '<div class="w-2 h-2 bg-[#6f809b] rounded-full"></div>';
+        postedTime.classList.add('text-[#6f809b]','flex','items-center','gap-2')
         
+        const timeLine = document.createElement('div')
+        const contractTime = document.createElement('h3')
+        contractTime.textContent = job.contract
+        contractTime.classList.add('text-[#6f809b]','contract')
+    
+        timeLine.appendChild(postedTime)
+        timeLine.appendChild(contractTime)
+        timeLine.classList.add('flex','flex-row','gap-2')
+
         const jobRole = document.createElement('h2')
         jobRole.innerHTML = job.position
         jobRole.classList.add('text-[1.3rem]','text-[#121721]','hover:text-[#9dcdff]');
@@ -36,7 +45,7 @@ const createJobCards = (job,index)=>{
         companyName.classList.add('text-[#6f809b]')
         
         const jobDetails = document.createElement('div')
-        jobDetails.appendChild(postedContractTime);
+        jobDetails.appendChild(timeLine);
         jobDetails.appendChild(jobRole);
         jobDetails.appendChild(companyName);
         jobDetails.classList.add('flex','flex-col','gap-y-2')
