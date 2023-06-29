@@ -1,7 +1,7 @@
 import { jobsLoader} from './job-loader.js'
 
 
-export const searchByTitle = ()=>{
+export const filterByTitle = ()=>{
     const filterInput = document.getElementById('filter-title').value.toLowerCase();
     const jobCards = document.querySelectorAll('.job-card')
 
@@ -18,15 +18,5 @@ export const searchByTitle = ()=>{
             jobCard.style.display = 'none';
         }
     })
-
-    /* const jobList = document.querySelectorAll('.job-card')
-    Array.from(jobList).forEach((jobItem)=>{
-        jobItem.cla
-    }) */
-    // jobList.classList.add('mobile:gap-y-16')
-
-
-
-    // const headerDiv = document.querySelector('header div')
-    // headerDiv.classList.add('mobile:mt-[4.38rem]')
 }
+

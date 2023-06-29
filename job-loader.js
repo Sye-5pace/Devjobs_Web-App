@@ -48,7 +48,7 @@ const createJobCards = (job,index)=>{
         jobCard.appendChild(jobIcon)
         jobCard.appendChild(jobDetails)
         jobCard.appendChild(companyLocation)
-        jobCard.classList.add('flex','flex-col','pl-8','bg-[#fff]','gap-y-9','pb-6' ,'rounded-[0.8rem]','job-card')
+        jobCard.classList.add('flex','flex-col','pl-8','bg-[#fff]','gap-y-9','pb-6' ,'rounded-[0.25rem]','job-card')
 
         
         jobCard.addEventListener('click',(event)=>{
@@ -103,12 +103,6 @@ loadMore.addEventListener('click', (event)=>{
     
     const jobContainer = document.getElementById('job-container')
     jobContainer.innerHTML = '';
-
-    const body = document.querySelector('body')
-    body.classList.add('mobile:grid-rows-[6%_70%]')
-
-    const headerDiv = document.querySelector('header div')
-    headerDiv.classList.add('mobile:mt-[4.65rem]')
     
     const remainingJobs = jobs.slice(currentIndex)
     
