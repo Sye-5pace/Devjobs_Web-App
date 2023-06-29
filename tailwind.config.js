@@ -10,7 +10,7 @@ export default {
       'fredoka':['Fredoka','sans-serif'],
     },
     colors: {
-      'royal-blue':'#5964e0',
+      'royal-blue':'#5864e1',
       'vulcan':'#121721',
       'anakiwa' :'#9dcdff',
       'baymany':'#21437d',
