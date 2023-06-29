@@ -98,13 +98,20 @@ const createJobCards = (job,index)=>{
 }
 
 loadMore.addEventListener('click', (event)=>{
+    
     event.currentTarget.classList.add('opacity-30')
-
+    
     const jobContainer = document.getElementById('job-container')
     jobContainer.innerHTML = '';
 
-    const remainingJobs = jobs.slice(currentIndex)
+    const body = document.querySelector('body')
+    body.classList.add('mobile:grid-rows-[6%_70%]')
 
+    const headerDiv = document.querySelector('header div')
+    headerDiv.classList.add('mobile:mt-[4.65rem]')
+    
+    const remainingJobs = jobs.slice(currentIndex)
+    
     remainingJobs.forEach((job,index)=>{
         const jobCard = createJobCards(job,index)
         jobContainer.appendChild(jobCard)
