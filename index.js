@@ -26,4 +26,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         filterMobileModal.style.display = 'none';
         filterByLocation();
     });
+
+    const close = document.querySelector('#close');
+    close.addEventListener("click", ()=>{
+        filterMobileModal.style.display = 'none';
+    });
 })
