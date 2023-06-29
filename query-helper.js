@@ -35,7 +35,7 @@ export const filterByLocation = ()=>{
         console.log(isFullTime + " =" + contractTime)
         console.log(filterInput + " =" + jobLocation)
 
-        if( contractTime.includes(isFullTime.toLowerCase()) || jobLocation.includes(filterInput)){
+        if( contractTime === isFullTime.toLowerCase() || jobLocation === filterInput){
             jobCard.style.display = 'flex';
             jobCard.classList.add('flex-col','pl-8','bg-[#fff]','gap-y-9','pb-6' ,'rounded-[0.8rem]','job-card')
         }else{
