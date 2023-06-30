@@ -32,9 +32,6 @@ export const filterByLocation = ()=>{
         const contractTime = jobCard.querySelector('.contract').textContent.toLowerCase();
         const jobLocation = jobCard.querySelector('p').textContent.toLowerCase();
 
-        console.log(isFullTime + " =" + contractTime)
-        console.log(filterInput + " =" + jobLocation)
-
         if( contractTime === isFullTime.toLowerCase() || jobLocation === filterInput){
             jobCard.style.display = 'flex';
             jobCard.classList.add('flex-col','pl-8','bg-[#fff]','gap-y-9','pb-6' ,'rounded-[0.8rem]','job-card')
@@ -44,3 +41,10 @@ export const filterByLocation = ()=>{
 
     })
 }
+
+
+//color note:
+//#E0BA2D-golden-grass
+//#E6C033-tulip tree
+// #905C5A
+
