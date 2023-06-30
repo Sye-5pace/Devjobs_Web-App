@@ -1045,6 +1045,10 @@ video {
   border-radius: 0.375rem;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-dashed {
   border-style: dashed;
 }

@@ -67,7 +67,9 @@ const createJobCards = (job,index)=>{
 
             const companyLogo = job.logo
             const companyName = job.company
-            const postTimeContract = job.postedAt + '<div class="w-2 h-2 bg-[#6f809b] rounded-full"></div>' + job.contract;
+            const link = job.link
+            const postedTime = job.postedAt
+            const contractTime =  job.contract;
             const jobRole = job.role
             const location = job.location
             const jobDesc = job.desc
@@ -86,7 +88,9 @@ const createJobCards = (job,index)=>{
             const url = "jobs-detail.html?" + 
             "&redirectLogo=" + encodeURIComponent(companyLogo) +
             "&redirectName=" + encodeURIComponent(companyName) +
-            "&redirectTimeContract=" + encodeURIComponent(postTimeContract) +
+            "&redirectLink=" + encodeURIComponent(link) +
+            "&redirectPostedTime=" + encodeURIComponent(postedTime) +
+            "&redirectContractTime=" + encodeURIComponent(contractTime) +
             "&redirectRole=" + encodeURIComponent(jobRole) +
             "&redirectLocation=" + encodeURIComponent(location) +
             "&redirectDesc=" + encodeURIComponent(jobDesc) +
