@@ -70,7 +70,7 @@ const createJobCards = (job,index)=>{
             const link = job.link
             const postedTime = job.postedAt
             const contractTime =  job.contract;
-            const jobRole = job.role
+            const role = job.position
             const location = job.location
             const jobDesc = job.desc
             const requirementTitle = job.requirements.reqTitle
@@ -91,7 +91,7 @@ const createJobCards = (job,index)=>{
             "&redirectLink=" + encodeURIComponent(link) +
             "&redirectPostedTime=" + encodeURIComponent(postedTime) +
             "&redirectContractTime=" + encodeURIComponent(contractTime) +
-            "&redirectRole=" + encodeURIComponent(jobRole) +
+            "&redirectRole=" + encodeURIComponent(role) +
             "&redirectLocation=" + encodeURIComponent(location) +
             "&redirectDesc=" + encodeURIComponent(jobDesc) +
             "&redirectReqTitle=" + encodeURIComponent(requirementTitle) +
