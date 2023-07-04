@@ -100,7 +100,9 @@ document.addEventListener("DOMContentLoaded",()=>{
         document.querySelector("ol").appendChild(resLi4)
 
 
-        //red
+        //footer elements
+        document.querySelector("footer h2").textContent = role ;
+        document.querySelector("footer p").textContent = name;
 
     }
 
