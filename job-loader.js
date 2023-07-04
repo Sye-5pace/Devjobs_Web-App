@@ -38,7 +38,7 @@ const createJobCards = (job,index)=>{
 
         const jobRole = document.createElement('h2')
         jobRole.innerHTML = job.position
-        jobRole.classList.add('text-[1.3rem]','text-[#121721]','hover:text-[#9dcdff]');
+        jobRole.classList.add('text-[1.3rem]','text-[#121721]','hover:text-[#9dcdff]','cursor-pointer');
         
         const companyName = document.createElement('h3')
         companyName.textContent = job.company;
