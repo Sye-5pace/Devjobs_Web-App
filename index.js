@@ -1,5 +1,5 @@
 import { jobsLoader} from './job-loader.js'
-import { filterByTitle,filterByLocation } from './query-helper.js';
+import { filterByTitle,filterByLocation,sortAll } from './query-helper.js';
 
 document.addEventListener('DOMContentLoaded', ()=>{
     jobsLoader();
@@ -27,8 +27,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
         filterByLocation();
     });
 
+    //filter by location for all screens
+    const sort = document.getElementById('sort');
+    sort.addEventListener("click", sortAll);
+
     const close = document.querySelector('#close');
     close.addEventListener("click", ()=>{
         filterMobileModal.style.display = 'none';
     });
+
+    const darkMode = document.querySelector('#dark');
+    darkMode.addEventListener("click", ()=>{})
 })
