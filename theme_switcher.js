@@ -99,7 +99,7 @@ export const toggleTheme = (darkModeEnabled)=>{
 
         if(footer){
             footer.style.backgroundColor = darkModeEnabled ? "#19212c":"#fff";
-            footer.querySelector('h2').style.color = darkModeEnabled ? "#fffffc":"#fff";
+            footer.querySelector('h2').style.color = darkModeEnabled ? "#fffffc":"#121721";
         }
 
         if(contractDetailsH1){
