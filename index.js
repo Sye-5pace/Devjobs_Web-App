@@ -1,11 +1,11 @@
 import { jobsLoader} from './job-loader.js'
 import { filterByTitle,filterByLocation,sortAll } from './query-helper.js';
-// import { loadTheme,toggleTheme} from "./theme_switcher.js";
+import { loadTheme,toggleTheme} from "./theme_switcher.js";
 
 document.addEventListener('DOMContentLoaded', ()=>{
     jobsLoader();
 
-    // loadTheme();
+    loadTheme();
     //default refresher for the page
     const defaultRefresher = document.getElementById('default-refresher');
     defaultRefresher.addEventListener('click',()=>{
@@ -43,17 +43,19 @@ document.addEventListener('DOMContentLoaded', ()=>{
     //Theme event listeners
     //Dark mode
     const darkMode = document.querySelector('#dark');
-    const switchMode = document.querySelector('#switch');
     darkMode.addEventListener("click", ()=>{
+        const switchMode = document.querySelector('#switch');
         switchMode.classList.add("switch-dark");
-        // toggleTheme(true);
+        toggleTheme(true);
         console.log("Dark mode");
     })
     
     //Light mode
     const lightMode = document.querySelector('#light');
     lightMode.addEventListener("click", ()=>{
+        const switchMode = document.querySelector('#switch');
         switchMode.classList.remove("switch-dark");
+        toggleTheme(false);
         console.log("light mode");
     })
 })

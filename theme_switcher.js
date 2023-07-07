@@ -6,7 +6,7 @@ export const saveTheme = (darkModeEnabled) => {
 
 
 //Load theme from localStorage:
-export const loadTheme = (darkModeEnabled)=> {
+export const loadTheme = ()=> {
     const darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
     toggleTheme(darkModeEnabled)
 }
@@ -20,11 +20,11 @@ export const toggleTheme = (darkModeEnabled)=>{
     const sortLocation = document.querySelector('#sort-location');
     const jobs = Array.from(jobsCards)
     const fullTimeLabel = document.querySelector('#fulltime-label');
-    // const switchMode = document.getElementById('switch');
+    const switchMode = document.getElementById('switch');
 
     if(darkModeEnabled) {
         //css transition/animation for the mode-node/icon
-        switchMode.classList.add("");
+        switchMode.classList.add("switch-dark");
         body.style.backgroundColor= '#131621';
         navbar.style.backgroundColor= '#19212c';
         fullTimeLabel.style.color='#fffffc'
@@ -32,6 +32,7 @@ export const toggleTheme = (darkModeEnabled)=>{
         sortTitle.style.color= '#fffffc';
         sortLocation.style.backgroundColor= '#19212c';
         sortLocation.style.color= '#fffffc';
+        switchMode.classList.add("switch-dark");
         
         jobs.forEach((jobCard)=>{
             jobCard.style.backgroundColor= "#19212c";
@@ -40,7 +41,7 @@ export const toggleTheme = (darkModeEnabled)=>{
         })
         saveTheme(true);
     }else{
-        switchMode.classList.add("");
+        switchMode.classList.remove("switch-dark");
         body.style.backgroundColor= '#f4f6f8';
         navbar.style.backgroundColor= '#fff';
         fullTimeLabel.style.color='#6e8096'

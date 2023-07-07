@@ -1130,7 +1130,7 @@ video {
 }
 
 .switch{
-  transition: transform  0.65s ease;
+  transition: transform  0.18s ease;
 }
 
 .switch-dark{
