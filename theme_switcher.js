@@ -22,6 +22,13 @@ export const toggleTheme = (darkModeEnabled)=>{
     const jobs = Array.from(jobsCards)
     const fullTimeLabel = document.querySelector('#fulltime-label');
     const switchMode = document.getElementById('switch');
+    const switchContainer = document.getElementById('switch-container');
+    const dark = document.getElementById('dark');
+    const filterInput = document.getElementById('filter-title')
+    const mobileModal = document.getElementById('modal');
+    const filterLocation = document.getElementById('filter-location');
+    // const filterFullTime = document.querySelector('#modal-fulltext');
+    
     
     //job-detail.html elements
     const headerDetails = document.querySelector('#header-details');
@@ -36,6 +43,34 @@ export const toggleTheme = (darkModeEnabled)=>{
 
 
             // Conditional checks to handle elements on different pages
+        if(switchContainer){
+            switchContainer.style.backgroundColor = darkModeEnabled ? '#19212c': '#fff';
+        }
+        
+        if(mobileModal){
+            modal.style.backgroundColor = darkModeEnabled ? '#19212c' : '#fff';
+        }
+
+        if(filterLocation){
+            filterLocation.style.backgroundColor = darkModeEnabled ? '#19212c' : '#fff';
+        }
+
+        /* if(filterFullTime){
+            filterFullTime.style.color = darkModeEnabled ? '#19212c' : '#fff';
+        } */
+
+        if (dark) {
+            if (darkModeEnabled) {
+              dark.classList.add("fill-[#19212c]");
+            } else {
+              dark.classList.remove("fill-[#19212c]");
+            }
+        }
+
+        if(filterInput){
+            filterInput.style.backgroundColor = darkModeEnabled ? '#19212c' : '#fff';
+        }
+
         if (navbar) {
             navbar.style.backgroundColor = darkModeEnabled ? '#19212c' : '#fff';
         }

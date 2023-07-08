@@ -1,4 +1,7 @@
 import jobs from './data'
+import { filterFullTime,filterTitle ,filterLocation } from './query-helper.js';
+
+import {loadTheme} from './theme_switcher'
 
 // console.log(jobs[0].logo)
 let defaultLoad = [];
@@ -123,4 +126,9 @@ loadMore.addEventListener('click', (event)=>{
         const jobCard = createJobCards(job,index)
         jobContainer.appendChild(jobCard)
     });
+
+    loadTheme();
+    filterFullTime();
+    filterTitle(); 
+    filterLocation();
 });

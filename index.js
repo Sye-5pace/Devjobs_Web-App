@@ -1,5 +1,5 @@
 import { jobsLoader} from './job-loader.js'
-import { filterByTitle,filterByLocation,sortAll } from './query-helper.js';
+import { filterByTitle,filterByLocation,filterFullTime,filterTitle ,filterLocation } from './query-helper.js';
 import { loadTheme,toggleTheme} from "./theme_switcher.js";
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -32,9 +32,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
 
     //filter by location for all screens
-    const sort = document.getElementById('sort');
-    sort.addEventListener("click", sortAll);
+    // const fullTimeChecked = document.querySelector('#fulltime-checked');
+    const fullTime = document.getElementById('sort');
+    fullTime.addEventListener("click",filterFullTime);
+    
+    const titleValue = document.getElementById('sort-title')
+    titleValue.addEventListener("input",filterTitle);
 
+    const locationValue = document.getElementById('sort-location')
+    locationValue.addEventListener("input",filterLocation);
+    
     const close = document.querySelector('#close');
     close.addEventListener("click", ()=>{
         filterMobileModal.style.display = 'none';
