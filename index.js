@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 
     //Sort,Filter features
-    //Sort,Filter features
     const search = document.querySelector('#search');
     search.addEventListener("click", filterByTitle)
 

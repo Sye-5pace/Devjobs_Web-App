@@ -13,7 +13,6 @@ export const loadTheme = ()=> {
 
 
 export const toggleTheme = (darkModeEnabled)=>{
-    //index.html elements
     const navbar = document.querySelector('nav');
     const body = document.querySelector('body');
     const jobsCards = document.querySelectorAll('.job-card');
@@ -55,9 +54,6 @@ export const toggleTheme = (darkModeEnabled)=>{
             filterLocation.style.backgroundColor = darkModeEnabled ? '#19212c' : '#fff';
         }
 
-        /* if(filterFullTime){
-            filterFullTime.style.color = darkModeEnabled ? '#19212c' : '#fff';
-        } */
 
         if (dark) {
             if (darkModeEnabled) {
